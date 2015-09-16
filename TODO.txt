@@ -1,0 +1,2 @@
+Allow for comments via Disqus: http://joshualande.com/jekyll-github-pages-poole/
+Already have a Disqus account and changed the files. Does not work yet.
