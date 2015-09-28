@@ -6,6 +6,8 @@ tags: [R, lm, glm, contrasts]
 comments: True
 ---
 
+THIS BLOG POST IS STILL WORK IN PROGRESS
+
 I am holding an exercise on generalised models these days. Preparing a task on factor coding
 in generalised linear models, I realised that the help on the internet on that is not so
 easy to understand. At least what I found. So in order to help people who find this topic 
@@ -13,8 +15,7 @@ confusing, I want to help out a little here.
 
 Consider the following data
 
-```{r}
-### 2 ###
+```{r, fig.height=5, message=FALSE}
 
 set.seed(29)
 x <- gl(5, 10) # 5 factor's levels, each replicated 10 times
@@ -34,12 +35,13 @@ Now we want to model the mean of y given x using the `lm()` function with the fo
 *dummy-coding*, *treatment-coding* (where the reference category is 5), *effect-coding*
 and *split-coding*.
 
-Let's say that we have a categorical variable $X$ with $K$ categories ($a_1, \dots, a_K$)
+To make the theory more general, we have a categorical variable $X$ with $K$ categories ($a_1, \dots, a_K$)
+
 
 ## Dummy-coding
 Look at each level separately:
 
-$E(Y|X=a_k) = \beta_k, \quad k=1,\dots,K$
+\[E(Y|X=a_k) = \beta_k, \quad k=1,\dots,K\]
 
 ```{r}
 # dummy (each level singularly)

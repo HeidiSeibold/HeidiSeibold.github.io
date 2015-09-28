@@ -1,4 +1,5 @@
 # Dependencies
+# markdown: kramdown
 markdown:         redcarpet
 highlighter:      pygments
 
