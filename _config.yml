@@ -21,6 +21,9 @@ author:
 paginate:         1
 
 # Custom vars
-
 github:
   repo:		  https://github.com/HeidiSeibold/HeidiSeibold.github.io 
+  
+# Feed
+gems:
+  - jekyll-feed
