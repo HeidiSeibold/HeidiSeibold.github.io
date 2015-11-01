@@ -48,7 +48,7 @@ To make the theory more general, we have a categorical variable $X$ with $K$ cat
 
 ## Dummy-coding
 Look at each level separately:
-
+$$\pi$$ 
 $$E(Y|X=a_k) = \beta_k, \quad k=1,\dots,K$$
 
 
