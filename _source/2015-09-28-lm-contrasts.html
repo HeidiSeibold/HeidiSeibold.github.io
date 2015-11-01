@@ -82,11 +82,11 @@ means</code></pre>
 <pre><code>##         1         2         3         4         5 
 ## 0.9962925 2.0227058 3.0230409 3.9482690 5.0189041</code></pre>
 <p>Now we want to model the mean of y given x using the <code>lm()</code> function with the following codings: <em>dummy-coding</em>, <em>treatment-coding</em> (where the reference category is 5), <em>effect-coding</em> and <em>split-coding</em>.</p>
-<p>To make the theory more general, we have a categorical variable <span class="math">\(X\)</span> with <span class="math">\(K\)</span> categories (<span class="math">\(a_1, \dots, a_K\)</span>)</p>
+<p>To make the theory more general, we have a categorical variable \( X \) with \( K \) categories \( (a_1, , a_K) \)</p>
 <div id="dummy-coding" class="section level2">
 <h2>Dummy-coding</h2>
-<p>Look at each level separately:</p>
-<p><span class="math">\[E(Y|X=a_k) = \beta_k, \quad k=1,\dots,K\]</span></p>
+<p>Look at each level separately: \[  \]</p>
+<p>\[ E(Y|X=a_{k}) \] <code>$$ a_{k} $$</code> \[ _k \] \[ k=1,,K \] \[ E(Y|X=a_{k}) = _k, k=1,,K \]</p>
 <pre class="r"><code># dummy (each level singularly)
 lm_dummy &lt;- lm( y ~ x - 1, contrasts = list(x = contr.treatment(5)))
 summary(lm_dummy)</code></pre>
@@ -120,9 +120,9 @@ summary(lm_dummy)</code></pre>
 </div>
 <div id="treatment-coding" class="section level2">
 <h2>Treatment-coding</h2>
-<p>Compare each category to the dummy-category <span class="math">\(a_d\)</span>:</p>
-<p><span class="math">\(E(Y|X=a_{d}) = \beta_0\)</span></p>
-<p><span class="math">\(E(Y|X=a_k) = \beta_0 + \beta_k, \quad k\neq d\)</span></p>
+<p>Compare each category to the dummy-category \( a_d \):</p>
+<p>\[ E(Y|X=a_{d}) = _0 \]</p>
+<p>\[ E(Y|X=a_k) = _0 + _k, kd \]</p>
 <pre class="r"><code># treatment (restrict one level to costant term, all other difference from it)
 lm_treatment &lt;- lm( y ~ x, contrast = list(x = contr.treatment(5, base = 5)))
 summary(lm_treatment)</code></pre>
@@ -157,8 +157,8 @@ summary(lm_treatment)</code></pre>
 <div id="effect-coding" class="section level2">
 <h2>Effect-coding</h2>
 <p>Compare each category to the mean:</p>
-<p><span class="math">\(E(Y|X=a_k) = \beta_0 + \beta_k, \quad k=1,\dots,K-1\)</span></p>
-<p><span class="math">\(E(Y|X=a_K) = \beta_0 - \sum\limits_{j=1}^{K-1} \beta_j\)</span></p>
+<p>\[ E(Y|X=a_k) = _0 + _k, k=1,,K-1 \]</p>
+<p>\[ E(Y|X=a_K) = <em>0 - </em>{j=1}^{K-1} _j \]</p>
 <pre class="r"><code># effect(deviation from overall average)
 lm_effect &lt;- lm(y ~ x, contrast = list(x = contr.sum(5)))
 summary(lm_effect)</code></pre>
@@ -193,8 +193,8 @@ summary(lm_effect)</code></pre>
 <div id="split-coding" class="section level2">
 <h2>Split-coding</h2>
 <p>Compare each category to the previous category (for ordered categories):</p>
-<p><span class="math">\(E(Y|X=a_1) = \beta_0\)</span></p>
-<p><span class="math">\(E(Y|X=a_k) = \beta_0 + \sum\limits_{j=1}^{k-1} \beta_j, \quad k=2,\dots,K\)</span></p>
+<p>\[ E(Y|X=a_1) = _0 \]</p>
+<p>\[ E(Y|X=a_k) = <em>0 + </em>{j=1}^{k-1} _j, k=2,,K \]</p>
 <pre class="r"><code># split coding
 c &lt;- rbind( c(0,0,0,0),
             c(1,0,0,0),

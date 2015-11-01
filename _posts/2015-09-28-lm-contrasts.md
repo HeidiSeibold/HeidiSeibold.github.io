@@ -43,13 +43,12 @@ Now we want to model the mean of y given x using the `lm()` function with the fo
 *dummy-coding*, *treatment-coding* (where the reference category is 5), *effect-coding*
 and *split-coding*.
 
-To make the theory more general, we have a categorical variable $X$ with $K$ categories ($a_1, \dots, a_K$)
+To make the theory more general, we have a categorical variable  \\( X \\) with \\( K \\) categories \\( (a\_1, \dots, a\_K) \\)
 
 
 ## Dummy-coding
 Look at each level separately:
-$$\pi$$ 
-$$E(Y|X=a_k) = \beta_k, \quad k=1,\dots,K$$
+\\[ E(Y|X=a\_{k}) = \beta\_k, \quad k=1,\dots,K \\]
 
 
 ```r
@@ -101,11 +100,11 @@ means
 ```
 
 ## Treatment-coding
-Compare each category to the dummy-category $a_d$:
+Compare each category to the dummy-category \\( a\_d \\):
 
-$E(Y|X=a_{d}) = \beta_0$
+\\[ E(Y|X=a\_{d}) = \beta\_0 \\]
 
-$E(Y|X=a_k) = \beta_0 + \beta_k, \quad k\neq d$
+\\[ E(Y|X=a\_k) = \beta\_0 + \beta\_k, \quad k\neq d \\]
 
 ```r
 # treatment (restrict one level to costant term, all other difference from it)
@@ -159,9 +158,9 @@ c(means[5], means[1:4] - means[5])
 ## Effect-coding
 Compare each category to the mean:
 
-$E(Y|X=a_k) = \beta_0 + \beta_k, \quad k=1,\dots,K-1$
+\\[ E(Y|X=a\_k) = \beta\_0 + \beta\_k, \quad k=1,\dots,K-1 \\]
 
-$E(Y|X=a_K) = \beta_0 - \sum\limits_{j=1}^{K-1} \beta_j$
+\\[ E(Y|X=a\_K) = \beta\_0 - \sum\limits\_{j=1}^{K-1} \beta\_j \\]
 
 ```r
 # effect(deviation from overall average)
@@ -215,9 +214,9 @@ c(mean(means), means[1:4] - mean(means))
 ## Split-coding
 Compare each category to the previous category (for ordered categories):
 
-$E(Y|X=a_1) = \beta_0$
+\\[ E(Y|X=a\_1) = \beta\_0 \\]
 
-$E(Y|X=a_k) = \beta_0 + \sum\limits_{j=1}^{k-1} \beta_j, \quad k=2,\dots,K$
+\\[ E(Y|X=a\_k) = \beta\_0 + \sum\limits\_{j=1}^{k-1} \beta\_j, \quad k=2,\dots,K \\]
 
 ```r
 # split coding
