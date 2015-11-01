@@ -6,8 +6,6 @@ tags: [R, lm, glm, contrasts]
 comments: True
 ---
 
-THIS BLOG POST IS STILL WORK IN PROGRESS
-
 I am holding an exercise on generalised models these days. Preparing a task on factor coding
 in generalised linear models, I realised that the help on the internet on that is not so
 easy to understand. At least what I found. So in order to help people who find this topic 
@@ -26,7 +24,7 @@ library(ggplot2)
 ggplot(aes(x = x, y = y), data = dd) + geom_boxplot()
 ```
 
-![plot of chunk unnamed-chunk-1](/figure/source/2015-09-28-lm-contrasts/unnamed-chunk-1-1.png) 
+![plot of chunk unnamed-chunk-1](/figure/source/2015-11-01-lm-contrasts/unnamed-chunk-1-1.png) 
 
 ```r
 means <- tapply(y, x, mean)
@@ -107,7 +105,7 @@ Compare each category to the dummy-category \\( a\_d \\):
 \\[ E(Y|X=a\_k) = \beta\_0 + \beta\_k, \quad k\neq d \\]
 
 ```r
-# treatment (restrict one level to costant term, all other difference from it)
+# treatment (restrict one level to constant term, all other difference from it)
 lm_treatment <- lm( y ~ x, contrast = list(x = contr.treatment(5, base = 5)))
 summary(lm_treatment)
 ```
