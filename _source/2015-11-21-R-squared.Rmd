@@ -1,0 +1,64 @@
+---
+title: "Why using R-squared is a bad idea"
+author: "Heidi Seibold"
+date: "November 21, 2015"
+layout: post
+tags: [R, lm, glm, contrasts]
+comments: True
+---
+
+The coefficient of determination is otherwise known as $R^2$ and is often used to 
+determine whether a model is good.
+The [Wikipedia article](https://en.wikipedia.org/wiki/Coefficient_of_determination) 
+says that $R^2$ "[...]  is a number that indicates how well data fit a statistical model –
+sometimes simply a line or a curve. An $R^2$ of 1 indicates that the regression line perfectly
+fits the data, while an $R^2$ of 0 indicates that the line does not fit the data at all".
+From this we could conclude that we can use this measure to indicate how good our model
+is. There are, however, 2 major problems with that conclusion:
+
+1. Sometimes just having a model that is a little better than random guessing is already
+great.
+2. Adding useless covariates to the model improves $R^2$.
+
+The first argument is supported best by the example stock market. If I have a model
+that is just a little bit better than random guessing, I will be rich.
+The second argument I want to show on an example.
+
+```{r}
+set.seed(17)
+
+n <- 200
+
+x <- rnorm(n = n, mean = 1, sd = 1)
+y <- 2 + 5 * x + rnorm(n = n, mean = 0, sd = 20)
+df <- data.frame(y = y, x = x)
+
+lmod <- lm(y ~ x, data = df)
+summary(lmod)
+summary(lmod)$r.squared
+```
+
+So we have an outcome $y$ that depends on a covariate $x$, but the noise is 
+very high, so our $R^2$ is pretty low. Let's add further useless covarates to the
+model.
+
+
+```{r, message = FALSE}
+R2 <- data.frame(p_useless = NULL, R2 = NULL, adjusted = NULL)
+
+for(i in 1:(n-1)) {
+  j <- ncol(df)
+  df[ , j+1] <- rnorm(n = n, mean = 0, sd = 1)
+  tmp <- data.frame(p_useless = i,
+                    R2 = c(summary(lm(y ~ ., data = df))$r.squared)
+  )
+  R2 <- rbind(R2, tmp)
+}
+
+library(ggplot2)
+ggplot(data = R2, aes(x = p_useless, y = R2)) + 
+  geom_point() + 
+  ylab(expression(R^2)) + 
+  xlab("number of useless covariates")
+```
+
