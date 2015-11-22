@@ -11,7 +11,7 @@ The coefficient of determination is otherwise known as \\(R^2\\) and is often us
 determine whether a model is good.
 The [Wikipedia article](https://en.wikipedia.org/wiki/Coefficient_of_determination) 
 says that \\(R^2\\) "[...]  is a number that indicates how well data fit a statistical model –
-sometimes simply a line or a curve. An \\(R^2\\)of 1 indicates that the regression line perfectly
+sometimes simply a line or a curve. An \\(R^2\\) of 1 indicates that the regression line perfectly
 fits the data, while an \\(R^2\\) of 0 indicates that the line does not fit the data at all".
 From this we could conclude that we can use this measure to indicate how good our model
 is. There are, however, 2 major problems with that conclusion:
