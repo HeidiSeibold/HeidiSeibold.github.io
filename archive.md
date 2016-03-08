@@ -43,6 +43,7 @@ title: Archive
 {% for tag in tags %}
 <a href="#{{ tag | slugify }}" class="codinfox-tag-mark"> {{ tag }} </a> &nbsp;&nbsp;
 {% endfor %}
+</p>
 
 {% for tag in tags %}
 <h5 id="{{ tag | slugify }}">{{ tag }}</h5>
@@ -66,8 +67,6 @@ title: Archive
 {% endfor %}
 
 
-
-<br/>
 
 
 
@@ -96,7 +95,6 @@ title: Archive
 {% endif %}
 {% endfor %}
 
-<div class="posts">
 <p>
 {% for ct in cats %}
 <a href="#{{ ct | slugify }}" class="codinfox-category-mark" style="color:#999;text-decoration: none;"> {{ ct }} </a> &nbsp;&nbsp;
@@ -144,4 +142,3 @@ title: Archive
 {% endfor %}
 </ul>
 
-</div>
