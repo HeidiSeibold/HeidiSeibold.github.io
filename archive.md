@@ -10,9 +10,8 @@ title: Archive
 {% endfor %}
 
 
-{% comment%}
-Here we generate all the tags.
-{% endcomment%}
+
+## Tags
 
 {% assign rawtags = "" %}
 {% for post in site.posts %}
@@ -37,9 +36,6 @@ Here we generate all the tags.
 {% endif %}
 {% endfor %}
 
-<h1 class="page-title">
-  <a href="/blog">Blog</a> | {{ page.title }}
-</h1>
 <br/>
 
 <div class="posts">
