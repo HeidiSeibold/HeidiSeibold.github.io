@@ -6,7 +6,7 @@ title: Archive
 ## Blog Posts
 
 {% for post in site.posts %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
+* {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
 {% endfor %}
 
 <br/>
@@ -38,7 +38,7 @@ title: Archive
 {% endif %}
 {% endfor %}
 
-<div class="posts">
+
 <p>
 {% for tag in tags %}
 <a href="#{{ tag | slugify }}" class="codinfox-tag-mark"> {{ tag }} </a> &nbsp;&nbsp;
@@ -47,25 +47,25 @@ title: Archive
 {% for tag in tags %}
 <h5 id="{{ tag | slugify }}">{{ tag }}</h5>
 <ul class="codinfox-category-list">
-  {% for post in site.posts %}
-  {% if post.tags contains tag %}
-  <li>
-    <p>
-      <a href="{{ post.url }}">
-        {{ post.title }}
-        <small>{{ post.date | date_to_string }}</small>
-      </a>
-      {% for tag in post.tags %}
-      <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-      {% endfor %}
-    </p>
-  </li>
-  {% endif %}
-  {% endfor %}
+{% for post in site.posts %}
+{% if post.tags contains tag %}
+<li>
+<p>
+<a href="{{ post.url }}">
+{{ post.title }}
+<small>{{ post.date | date_to_string }}</small>
+</a>
+{% for tag in post.tags %}
+<a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+{% endfor %}
+</p>
+</li>
+{% endif %}
+{% endfor %}
 </ul>
 {% endfor %}
 
-</div>
+
 
 <br/>
 
@@ -105,43 +105,43 @@ title: Archive
 </p>
 
 {% for ct in cats %}
-<h2 id="{{ ct | slugify }}">{{ ct }}</h2>
+<h5 id="{{ ct | slugify }}">{{ ct }}</h5>
 <ul class="codinfox-category-list">
-  {% for post in site.posts %}
-  {% if post.category contains ct %}
-  <li>
-    <h3>
-      <a href="{{ post.url }}">
-        {{ post.title }}
-        <small>{{ post.date | date_to_string }}</small>
-      </a>
-      {% for tag in post.tags %}
-      <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-      {% endfor %}
-    </h3>
-  </li>
-  {% endif %}
-  {% endfor %}
+{% for post in site.posts %}
+{% if post.category contains ct %}
+<li>
+<p>
+<a href="{{ post.url }}">
+{{ post.title }}
+<small>{{ post.date | date_to_string }}</small>
+</a>
+{% for tag in post.tags %}
+<a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+{% endfor %}
+</p>
+</li>
+{% endif %}
+{% endfor %}
 </ul>
 {% endfor %}
 
-<h2 id="no-category">No Category</h2>
+<h5 id="no-category">No Category</h5>
 <ul class="codinfox-category-list">
-  {% for post in site.posts %}
-  {% unless post.category %}
-  <li>
-    <h3>
-      <a href="{{ post.url }}">
-        {{ post.title }}
-        <small>{{ post.date | date_to_string }}</small>
-      </a>
-      {% for tag in post.tags %}
-      <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-      {% endfor %}
-    </h3>
-  </li>
-  {% endunless %}
-  {% endfor %}
+{% for post in site.posts %}
+{% unless post.category %}
+<li>
+<p>
+<a href="{{ post.url }}">
+{{ post.title }}
+<small>{{ post.date | date_to_string }}</small>
+</a>
+{% for tag in post.tags %}
+<a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+{% endfor %}
+</p>
+</li>
+{% endunless %}
+{% endfor %}
 </ul>
 
 </div>
