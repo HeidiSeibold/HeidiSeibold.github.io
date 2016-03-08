@@ -36,8 +36,6 @@ title: Archive
 {% endif %}
 {% endfor %}
 
-<br/>
-
 <div class="posts">
 <p>
 {% for tag in tags %}
