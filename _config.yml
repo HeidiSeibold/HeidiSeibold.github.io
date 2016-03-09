@@ -29,6 +29,9 @@ github:
 gems:
   - jekyll-feed
   - jekyll-paginate
+  
+feed:
+  path: atom.xml
 
 
 exclude: [vendor]
