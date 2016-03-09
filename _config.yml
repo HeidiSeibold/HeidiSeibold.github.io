@@ -28,3 +28,7 @@ github:
 # Feed
 gems:
   - jekyll-feed
+  - jekyll-paginate
+
+
+exclude: [vendor]
