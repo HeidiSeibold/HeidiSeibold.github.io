@@ -2,7 +2,7 @@
 title: "My favorite tools for helping future me"
 author: "Heidi Seibold"
 layout: post
-category: R
+category: Rbloggers
 tags: [R, make, knitr, linux, version control, svn]
 comments: True
 ---
