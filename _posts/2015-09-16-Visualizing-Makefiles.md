@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Visualizing Makefiles"
+category: Rbloggers
 tags: [make, R, visualisation]
 comments: True
 ---
@@ -11,9 +12,7 @@ I lately had the idea that it would be nice to be able to visualize my Makefiles
 Turns out that you need just a few lines in R to get a decent graph. I figured this
 would make a nice first blog entry. The code is not super-nice yet and will probably
 not work for more complex Makefiles, but you can write me if you have ideas. And 
-as soon as I have time, I will implement something for more complex Makefiles. For now
-though I think it is already a good first step and worth sharing.
-
+when I have time again, I will implement something for more complex Makefiles.
 
 So here is the code and the visualisation of one of my Makefiles:
 
