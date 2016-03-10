@@ -2,6 +2,7 @@
 title: "Factor codings for models in R"
 author: "Heidi Seibold"
 layout: post
+category: Rbloggers
 tags: [R, lm, glm, contrasts]
 comments: True
 ---
