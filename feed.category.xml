@@ -7,7 +7,7 @@ layout: null
 	<title>{{ site.name | xml_escape }} - Rbloggers</title>
 	<description>Posts categorized as 'Rbloggers'</description>
 	<link>{{ site.url }}</link>
-	<atom:link href="{{ site.url }}/feed.category.xml" rel="self" type="application/rss+xml" />
+	<link href="{{ site.url }}/feed.category.xml" rel="self"/>
 	{% for post in site.categories.Rbloggers limit:10 %}
 	<entry>
 		<title>{{ post.title }}</title>
