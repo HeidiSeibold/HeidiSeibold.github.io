@@ -1,20 +1,21 @@
 ---
+layout: null
 ---
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>{{ site.name | xml_escape }} - Rbloggers</title>
-		<description>Posts categorized as 'Rbloggers'</description>
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/feed.category.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.categories.Rbloggers limit:10 %}
-		<item>
-			<title>{{ post.title }}</title>
-			<link href="{{ site.url }}{{ post.url }}"/>
-			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>{{ site.url }}{{ post.id }}</id>
-			<content type="html">{{ post.content | xml_escape }}</content>
-		</item>
-		{% endfor %}
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>{{ site.name | xml_escape }} - Rbloggers</title>
+	<description>Posts categorized as 'Rbloggers'</description>
+	<link>{{ site.url }}</link>
+	<atom:link href="{{ site.url }}/feed.category.xml" rel="self" type="application/rss+xml" />
+	{% for post in site.categories.Rbloggers limit:10 %}
+	<entry>
+		<title>{{ post.title }}</title>
+		<link href="{{ site.url }}{{ post.url }}"/>
+		<updated>{{ post.date | date_to_xmlschema }}</updated>
+		<id>{{ site.url }}{{ post.id }}</id>
+		<content type="html">{{ post.content | xml_escape }}</content>
+	</entry>
+	{% endfor %}
+</feed>
+
