@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Visualizing Makefiles"
-category: Rbloggers
+category: R
 tags: [make, R, visualisation]
 comments: True
 ---
@@ -50,6 +50,6 @@ makegraph <- graph.data.frame(dependencymat)
 plot(makegraph, vertex.shape = "none", edge.arrow.size = 0.5)
 ```
 
-![plot of chunk unnamed-chunk-1](/figure/source/2015-09-16-Visualizing-Makefiles/unnamed-chunk-1-1.png) 
+![plot of chunk unnamed-chunk-1](/figure/source/2015-09-16-Visualizing-Makefiles/unnamed-chunk-1-1.png)
 
 Have fun using it!
