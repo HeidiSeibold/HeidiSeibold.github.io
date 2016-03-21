@@ -23,8 +23,8 @@ local({
     # you may want to adapt them to your own website
     knitr::opts_chunk$set(fig.path = sprintf('%s/', gsub('^.+/', '', d)))
     knitr::opts_knit$set(
-      base.dir = '~/Dropbox/Public/jekyll/',
-      base.url = 'http://db.yihui.name/jekyll/'
+      base.dir = '~/Documents/git/HeidiSeibold.github.io/',
+      base.url = 'http://heidiseibold.github.io/'
     )
   }
   knitr::opts_knit$set(width = 70)
