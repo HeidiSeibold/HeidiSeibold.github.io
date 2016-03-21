@@ -14,8 +14,8 @@ Not in a sense that my results got better. More
 in a sense that **my feeling about the work got better** and my analyses got 
 **easier to understand for future me**. 
 
-![before](/figure/source/heidi_before.jpg) 
-![after](/figure/source/heidi_after.jpg) 
+![before](http://heidiseibold.github.io/figure/source/heidi_before.jpg) 
+![after](http://heidiseibold.github.io/figure/source/heidi_after.jpg) 
 
 So in the following I would like to give a list of things that are helping 
 future Heidi most:
