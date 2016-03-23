@@ -15,7 +15,7 @@ confusing, I want to help out a little here.
 Consider the following data
 
 
-```r
+{% highlight r %}
 set.seed(29)
 x <- gl(5, 10) # 5 factor's levels, each replicated 10 times
 y <- rnorm(n = length(x), mean = as.integer(x), sd = 0.1)   # means= 1,2,3,4,5
@@ -23,19 +23,21 @@ dd <- data.frame(x = x, y = y)
 
 library(ggplot2)
 ggplot(aes(x = x, y = y), data = dd) + geom_boxplot()
-```
+{% endhighlight %}
 
-![plot of chunk unnamed-chunk-1](/figure/source/2015-11-01-lm-contrasts/unnamed-chunk-1-1.png) 
+![plot of chunk unnamed-chunk-1](http://heidiseibold.github.io/figure/source/2015-11-01-lm-contrasts/unnamed-chunk-1-1.png)
 
-```r
+{% highlight r %}
 means <- tapply(y, x, mean)
 means
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ##         1         2         3         4         5 
 ## 0.9962925 2.0227058 3.0230409 3.9482690 5.0189041
-```
+{% endhighlight %}
 
 
 Now we want to model the mean of y given x using the `lm()` function with the following codings:
@@ -50,13 +52,15 @@ Look at each level separately:
 \\[ E(Y|X=a\_{k}) = \beta\_k, \quad k=1,\dots,K \\]
 
 
-```r
+{% highlight r %}
 # dummy (each level singularly)
 lm_dummy <- lm( y ~ x - 1, contrasts = list(x = contr.treatment(5)))
 summary(lm_dummy)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## 
 ## Call:
 ## lm(formula = y ~ x - 1, contrasts = list(x = contr.treatment(5)))
@@ -78,25 +82,33 @@ summary(lm_dummy)
 ## Residual standard error: 0.1041 on 45 degrees of freedom
 ## Multiple R-squared:  0.9991,	Adjusted R-squared:  0.999 
 ## F-statistic: 1.014e+04 on 5 and 45 DF,  p-value: < 2.2e-16
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 coef(lm_dummy)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ##        x1        x2        x3        x4        x5 
 ## 0.9962925 2.0227058 3.0230409 3.9482690 5.0189041
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 means
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ##         1         2         3         4         5 
 ## 0.9962925 2.0227058 3.0230409 3.9482690 5.0189041
-```
+{% endhighlight %}
 
 ## Treatment-coding
 Compare each category to the dummy-category \\( a\_d \\):
@@ -105,13 +117,15 @@ Compare each category to the dummy-category \\( a\_d \\):
 
 \\[ E(Y|X=a\_k) = \beta\_0 + \beta\_k, \quad k\neq d \\]
 
-```r
+{% highlight r %}
 # treatment (restrict one level to constant term, all other difference from it)
 lm_treatment <- lm( y ~ x, contrast = list(x = contr.treatment(5, base = 5)))
 summary(lm_treatment)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## 
 ## Call:
 ## lm(formula = y ~ x, contrasts = list(x = contr.treatment(5, base = 5)))
@@ -133,25 +147,33 @@ summary(lm_treatment)
 ## Residual standard error: 0.1041 on 45 degrees of freedom
 ## Multiple R-squared:  0.9951,	Adjusted R-squared:  0.9947 
 ## F-statistic:  2293 on 4 and 45 DF,  p-value: < 2.2e-16
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 coef(lm_treatment)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## (Intercept)          x1          x2          x3          x4 
 ##    5.018904   -4.022612   -2.996198   -1.995863   -1.070635
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 c(means[5], means[1:4] - means[5]) 
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ##         5         1         2         3         4 
 ##  5.018904 -4.022612 -2.996198 -1.995863 -1.070635
-```
+{% endhighlight %}
 
 
 ## Effect-coding
@@ -161,13 +183,15 @@ Compare each category to the mean:
 
 \\[ E(Y|X=a\_K) = \beta\_0 - \sum\limits\_{j=1}^{K-1} \beta\_j \\]
 
-```r
+{% highlight r %}
 # effect(deviation from overall average)
 lm_effect <- lm(y ~ x, contrast = list(x = contr.sum(5)))
 summary(lm_effect)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## 
 ## Call:
 ## lm(formula = y ~ x, contrasts = list(x = contr.sum(5)))
@@ -189,25 +213,33 @@ summary(lm_effect)
 ## Residual standard error: 0.1041 on 45 degrees of freedom
 ## Multiple R-squared:  0.9951,	Adjusted R-squared:  0.9947 
 ## F-statistic:  2293 on 4 and 45 DF,  p-value: < 2.2e-16
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 coef(lm_effect)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## (Intercept)          x1          x2          x3          x4 
 ##  3.00184245 -2.00554992 -0.97913668  0.02119841  0.94642653
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 c(mean(means), means[1:4] - mean(means))
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ##                       1           2           3           4 
 ##  3.00184245 -2.00554992 -0.97913668  0.02119841  0.94642653
-```
+{% endhighlight %}
 
 
 ## Split-coding
@@ -217,7 +249,7 @@ Compare each category to the previous category (for ordered categories):
 
 \\[ E(Y|X=a\_k) = \beta\_0 + \sum\limits\_{j=1}^{k-1} \beta\_j, \quad k=2,\dots,K \\]
 
-```r
+{% highlight r %}
 # split coding
 c <- rbind( c(0,0,0,0),
             c(1,0,0,0),
@@ -227,9 +259,11 @@ c <- rbind( c(0,0,0,0),
 
 lm_split <- lm(y ~ x, contrast = list(x = c))
 summary(lm_split)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## 
 ## Call:
 ## lm(formula = y ~ x, contrasts = list(x = c))
@@ -251,25 +285,33 @@ summary(lm_split)
 ## Residual standard error: 0.1041 on 45 degrees of freedom
 ## Multiple R-squared:  0.9951,	Adjusted R-squared:  0.9947 
 ## F-statistic:  2293 on 4 and 45 DF,  p-value: < 2.2e-16
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 coef(lm_split)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## (Intercept)          x1          x2          x3          x4 
 ##   0.9962925   1.0264132   1.0003351   0.9252281   1.0706351
-```
+{% endhighlight %}
 
-```r
+
+
+{% highlight r %}
 c(means[1], diff(means))
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ##         1         2         3         4         5 
 ## 0.9962925 1.0264132 1.0003351 0.9252281 1.0706351
-```
+{% endhighlight %}
 
 
 

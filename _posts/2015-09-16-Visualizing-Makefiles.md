@@ -17,7 +17,7 @@ when I have time again, I will implement something for more complex Makefiles.
 So here is the code and the visualisation of one of my Makefiles:
 
 
-```r
+{% highlight r %}
 library(tm)
 library(igraph)
 
@@ -48,8 +48,8 @@ makegraph <- graph.data.frame(dependencymat)
 
 ## ... and plot
 plot(makegraph, vertex.shape = "none", edge.arrow.size = 0.5)
-```
+{% endhighlight %}
 
-![plot of chunk unnamed-chunk-1](/figure/source/2015-09-16-Visualizing-Makefiles/unnamed-chunk-1-1.png)
+![plot of chunk unnamed-chunk-1](http://heidiseibold.github.io/figure/source/2015-09-16-Visualizing-Makefiles/unnamed-chunk-1-1.png)
 
 Have fun using it!
