@@ -7,11 +7,14 @@ layout: none
   	<title>{{ site.title | xml_escape }} - r</title>
 		<description>Posts categorized as 'r'</description>
 		<link>{{ site.url }}</link>
+	<author>
+		<name>{{ site.author.name }}</name>
+		<email>{{ site.author.email }}</email>
+	</author>
 		<atom:link href="{{ site.url }}feed.category.xml" rel="self" type="application/rss+xml" />
     {% for post in site.categories.r limit:20 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <dc:creator>{{ site.author.name }}</dc:creator>
         <description>{{ post.content | xml_escape }}</description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <link>{{ site.url }}{{ post.url }}</link>
