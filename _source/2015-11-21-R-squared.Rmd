@@ -3,7 +3,7 @@ title: "Why using R-squared is a bad idea"
 author: "Heidi Seibold"
 date: "November 21, 2015"
 layout: post
-category: Rbloggers
+category: r
 tags: [R, lm, glm, coefficient of determination, good practice]
 comments: True
 ---
