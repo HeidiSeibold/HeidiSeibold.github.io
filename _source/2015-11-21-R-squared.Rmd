@@ -4,7 +4,7 @@ author: "Heidi Seibold"
 date: "November 21, 2015"
 layout: post
 category: r
-tags: [R, lm, glm, coefficient of determination, good practice]
+tags: [lm, glm, coefficient of determination, good practice]
 comments: True
 ---
 

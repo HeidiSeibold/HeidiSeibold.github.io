@@ -2,7 +2,7 @@
 layout: post
 title: "Visualizing Makefiles"
 category: r
-tags: [make, R, visualisation]
+tags: [make, visualisation]
 comments: True
 ---
 
