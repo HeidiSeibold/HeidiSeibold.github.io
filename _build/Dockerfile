@@ -2,26 +2,9 @@
 
 # servr::jekyll(command = '/usr/local/bin/jekyll build')
 
-# image: cboettig/labnotebook
-# 
-# Provides the R+Ruby+Jekyll+javascript environment needed to build my lab notebook sites
-# 
-# Use: 
-#   link the working directory of the site to build. 
-#   (`-e` keys only needed if using the twitter plugin)
-# 
-#     docker run --rm -v $(pwd):/data -w /data \
-#     -e TWIT_KEY -e TWIT_SECRET -e TWIT_TOK - e TWIT_TOK_SECRET \
-#     cboettig/labnotebook
-# 
-# Serve locally by running deamonized with auto-assigned port (-dP) by 
-# providing a custom CMD to jekyll:
-#
-#     docker run -dP -v $(pwd)/data cboettig/labnotebook \
-#       Rscript -e 'servr::jekyll(port = 4000, host = "0.0.0.0")'
+# most of the Dockerfile is taken from image: cboettig/labnotebook
 
 FROM rocker/hadleyverse 
-#MAINTAINER Carl Boettiger cboettig@ropensci.org 
 
 ## So that things like `top` and `less` work correctly
 ENV TERM xterm
