@@ -47,7 +47,7 @@ RUN apt-get update \
 ### (bundler likes to be a non-root user in sudoers.) 
 ### (Docker won't cache layers depending on external files, so this goes last)
 ADD Gemfile /data/Gemfile 
-ADD Gemfile.lock /data/Gemfile.lock
+#ADD Gemfile.lock /data/Gemfile.lock
 RUN adduser rstudio sudo \
   && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
   && chown -R rstudio:rstudio /data
@@ -57,7 +57,7 @@ RUN bundle update \
   && bundle config build.nokogiri --use-system-libraries \ 
   && bundle install \
   && bundle update
-#RUN export PATH=$PATH:/usr/local/bin/
+RUN export PATH=$PATH:/usr/local/bin/
 RUN gem list
 
 ## My git name, must be done for user pid 1000, and root
