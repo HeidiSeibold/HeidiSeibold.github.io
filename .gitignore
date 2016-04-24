@@ -1,4 +1,5 @@
-
+.Rhistory
+*.bak
 Gemfile.lock
 _site
 .Rproj.user

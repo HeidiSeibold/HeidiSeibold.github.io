@@ -50,6 +50,6 @@ makegraph <- graph.data.frame(dependencymat)
 plot(makegraph, vertex.shape = "none", edge.arrow.size = 0.5)
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-1](http://heidiseibold.github.io/figure/source/2015-09-16-Visualizing-Makefiles/unnamed-chunk-1-1.png)
+![plot of chunk unnamed-chunk-1](http://heidiseibold.github.io/figure/source/2015-09-16-Visualizing-Makefiles/unnamed-chunk-1-1.png) 
 
 Have fun using it!

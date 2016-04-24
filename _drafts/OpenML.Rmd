@@ -9,9 +9,12 @@ comments: True
 <!-- - Insert links for OpenML, OpenML github, challenge platforms -->
 <!-- - First create OpenML-R post  -->
 
-OpenML is a very cool new online platform that aims at improving, as the name says,
-Open Machine Learning. That means the platform stands for Open Data, Open Algorithms,
+[OpenML](http://www.openml.org/) is a very cool new online platform that aims at improving - 
+as the name says - Open Machine Learning. It stands for Open Data, Open Algorithms and
 Open Research.
+
+With this blog post I would like to introduce the main concepts, show who should be interested 
+in the platform and I will go a little into a challenge it faces.
 
 ## Concepts
 The following four concepts form the basis of the platform:
@@ -26,7 +29,7 @@ The figure shows how they are connected.
 ![OpenML](../figure/source/overview.png) 
 
 
-## Who can make use of the platform?
+## Who can make use of OpenML?
 #### The domain scientist
 You have data that you do not know how to analyse best? Upload your data to OpenML and you
 will have the whole world helping you. Write a good data and task description to make sure
@@ -38,7 +41,7 @@ check out the many tasks and go solve!
 
 #### The algorithm developer
 You developed a statistical method or a machine learning algorithm and want to try it out?
-You will find plenty of data sets and the possiblity to make your algorithm public.
+You will find plenty of data sets and the possibility to make your algorithm public.
 
 #### The student
 You study statistics, data science, machine learning? You want to know what is out there?
@@ -55,8 +58,20 @@ There are possibly many other people who will benefit from the platform, like me
 benchmarkers and people I can not think of right now. 
 
 
+## How to use OpenML
+Other than just browsing the website you can access OpenML through quite some interfaces such
+as [R](http://www.openml.org/guide#!r) or [WEKA](http://www.openml.org/guide#!plugin_weka).
+For an example on how to use the R interface check out the
+[tutorial](http://openml.github.io/openml-r/vignettes/OpenML.html).
+
+The whole project is of course open source. Check out the different 
+[git repositories](https://github.com/openml) for all the code and in case you have any 
+complaints.
+
+
 ## The overfitting problem
-Platforms like kaggle, crowdanalytics and innocentive host challenges and give people only
+Platforms like [kaggle](https://www.kaggle.com/), [crowdanalytics](https://www.crowdanalytix.com/) 
+and [innocentive](https://www.innocentive.com/) host challenges and give people only
 part of the data so they can evaluate the performance of the algorithm on a separate data
 set to (try to) prevent overfitting. So far OpenML does not do that, it always gives out 
 all the data and algorithms are evaluated via resampling procedures (on OpenML called
@@ -66,5 +81,4 @@ the beginning to doing repeated cross-validation on the (overly) good performing
 a given task. If you have ideas here, please don't hesitate to leave me a comment.
 
 The platform is still in it's childhood and may not be perfect yet (If you find issues, post
-them on the github page). But I think it can grow
-to be a great thing one day.
+them on the [github page](https://github.com/openml)). But I think it can grow to be a great thing one day.
