@@ -1,0 +1,37 @@
+---
+title: "A note on p-values from glm() and lm()?"
+author: "Heidi Seibold"
+date: "February 8, 2016"
+layout: post
+tags: [R, lm, glm, multiple testing]
+comments: True
+---
+
+The p-values and little stars we get when we look at a model output from 
+`glm()`, `lm()` and other model functions are not adjusted for multiple testing. 
+
+```{r}
+data(bodyfat, package = "TH.data")
+
+mod <- lm(DEXfat ~ ., data = bodyfat)
+summary(mod)
+```
+
+Especially for categorical variables with more than two categories like `anthro`
+in the above example you should be careful interpreting these p-values.
+
+When testing model parameters there are different questions we have to ask 
+ourselves:
+
+1. Do we have clear hypotheses?
+2. If we do, how many test do we really have and which kind of multiplicity
+adjustment do we want to use?
+
+If the answer to number 1 is no, then we just don't have to look at the p-values
+at all, anyway.
+If the answer is yes, we go to 2 and there is a range of possibilities out there:
+As I am not an expert I will just mention the `multcomp` package, but there are 
+also resampling based methods (bootstrap etc) you could use.
+
+
+

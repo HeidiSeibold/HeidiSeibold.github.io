@@ -1,0 +1,85 @@
+---
+layout: post
+title: "Organising R meetups is really easy"
+category: r
+tags: [meetup]
+comments: True
+---
+
+At the time of writing this post [meetup.com](http://www.meetup.com/topics/r-users-group/)
+counts 241 R User Group Meetups with 115,609 members. This is incredible and shows how big
+and amazing the R community is. But who are those people organizing all of this? And how do
+they find the time to do it? Well, I don't know. I only know who organises the 
+[Zurich R User Group](http://www.meetup.com/Zurich-R-User-Group/) - which are right now
+mostly Muriel, [Christoph](https://twitter.com/ChristophMolnar) and myself. 
+And to be honest the time it takes to organize a meetup is surprisingly little.
+
+The [Zurich R User Group](http://www.meetup.com/Zurich-R-User-Group/) was born in November 2015
+after Christoph and I had been discussing about doing it for more than half a year. The first
+meetup was held on Dezember 7th. Since then we have had two other 
+meetups and it has been a great experience so far. Today we are 301 members of the group and
+the last meetup was already attended by about 70 people. For a city with 400,000 inhabitants
+that seems pretty big to me.
+
+![meetup](http://heidiseibold.github.io/figure/source/meetup.png) 
+
+So your city has no R User Group yet? Go ahead an organize one. It's easy.
+
+## What are the things that need to be organized?
+
+### Things you have to do every once in a while
+
+#### Find sponsors
+Just think of who would be interested in having a good reputation with R users.
+This can be companies who offer products that might be interesting to R users or
+potetial employers of R users. Our sponsors so far have been 
+[RStudio](https://www.rstudio.com/), 
+[Zurich R Courses](http://www.zhrcourses.uzh.ch/index_en.html) and
+[Sanitas](https://www.sanitas.com/en/index.html). 
+We or people we know (thanks [Kirill](http://www.ivt.ethz.ch/people/muelleki)) approached
+them and they were all willing to help. After all snacks and drinks are not expensive.
+
+#### Find people to help
+The whole idea of a meetup is about community. You don't have to do everything alone.
+Christoph, Muriel and I have so far each taken the responsibility of organizing one
+event. We help each other and are always happy for more people to help. 
+
+### Things you have to think of for every meetup
+
+#### The speakers
+Approach people you know if they want to present their project. Announce open speaker slots
+in the meetup event. Ask people if they know interesting people who could present something.
+Talk to people at the meetups and encourage them to approach you if they would like to present.
+That is what we did so far and never had problems finding great speakers.
+
+#### The location
+Sponsors like hosting events. Otherwise Universities are a good option.
+Make sure to not only have a room to hold the talks in but also a nice area for 
+networking and drinks and snacks afterwards.
+So far we had one meetup at the Sanitas offices and two at the University of Zurich.
+Booking the rooms at the University was easy since Muriel and I are members.
+Microsoft has approached us recently with the offer to host a future meetup.
+
+#### The drinks and snacks
+If the sponsor hosts the meetup you don't have to worry about it. Otherwise you can order
+stuff. For the meetups at the University we ordered from [coop@home](https://www.coopathome.ch/)
+once and just went to the supermarket the other time. We got some beer, water and softdrinks as
+well as fruit, chips and other salty snacks. The water was always available already during the
+talks.
+
+#### Make sure everyone feels welcome
+There are a few things we do to (try to) make everyone feel welcome:
+
+- Have mixed difficulty talks.
+- Have different speakers (I have heard of a meetup where the same person has been
+presenting several times).
+- Have some buffer time before the talks for people to arrive and get to talk a little.
+It also prevents from interruptions due to people who arrive a little late.
+- Keep time of talks below 30 minutes and the whole presentation part at one hour (this is 
+peoples free time after all).
+- Just be kind to everyone and have fun :)
+
+
+
+
+
