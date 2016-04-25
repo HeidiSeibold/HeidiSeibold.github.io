@@ -15,7 +15,6 @@ account and follow me on [Twitter](https://twitter.com/HeidiBaya).
 I set up this blog using [knitr](yihui.name/knitr/), [servr](https://github.com/yihui/servr), 
 [Jekyll](https://jekyllrb.com/), [Hyde](http://hyde.getpoole.com) and [RStudio](rstudio.com).
 You can view the source code on [GitHub](https://github.com/HeidiSeibold/HeidiSeibold.github.io).
-
 Installing all the parts needed to set up a blog like this can be tedious. That is why I use
 [Docker](https://www.docker.com/) and just start a container with the neccessary details installed.
 See the [link](https://github.com/HeidiSeibold/HeidiSeibold.github.io/tree/master/_build)
