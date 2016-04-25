@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Organizing R meetups is really easy"
+title: "Organizing R meetups is really easy and fun"
 category: r
 tags: [meetup]
 comments: True
