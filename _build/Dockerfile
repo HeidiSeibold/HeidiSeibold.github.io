@@ -1,4 +1,4 @@
-# docker run --rm -p 8787:8787 -v /home/heidi/Documents/git/HeidiSeibold.github.io/:/home/rstudio blog
+# docker run --rm -p 8787:8787 -p 4000:4000 -v /home/heidi/Documents/git/HeidiSeibold.github.io/:/home/rstudio blog
 
 # servr::jekyll(command = '/usr/local/bin/jekyll build')
 
