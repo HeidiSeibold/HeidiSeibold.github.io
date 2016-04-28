@@ -1,0 +1,58 @@
+---
+title: "Docker - a Lovestory"
+author: "Heidi Seibold"
+layout: post
+category: r
+tags: [docker, jekyll, knitr, linux, reproducible research]
+comments: True
+---
+
+## How it all started
+
+I went to the [rOpenSci Unconf](http://unconf16.ropensci.org/) a couple of weeks ago.
+I went there being quite nervous, because so many great and super smart people would be there. 
+The event was organized as a sort of hackathon where people would work on different projects
+they were interested in. In the weeks before the unconf people were posting
+[ideas](https://github.com/ropensci/unconf16/issues) on what they would like to work on. There
+were so many topics I didn't even understand what they were about. The first project I decided
+to join in on was called 
+[Tutorials for more advanced topics with R](https://github.com/ropensci/unconf16/issues/35).
+As I consider myself an advanced R user I felt like I could do that. The group decided to 
+work on different topics, one of which was a Docker tutorial for R users. I did not know 
+exactly what Docker is. Just that it was similar to a virtual machine, but somehow cooler.
+I found it very intriguing and had been thinking I should learn about this Docker thing
+anyway. So I went ahead and joined in on the team and learned. What we produced is still
+work in progress, but I am pretty proud being part of it:
+Click [here](http://ropenscilabs.github.io/r-docker-tutorial/) to get to the website and
+[here](https://github.com/ropenscilabs/r-docker-tutorial) to get to the GitHub page. 
+Sean made a list list of the other projects on his [blog](http://seankross.com/notes/runconf16/).
+
+## What I use Docker for
+For a broader explanation on what Docker is why to use it please see the 
+[first lesson](http://ropenscilabs.github.io/r-docker-tutorial/01-what-and-why.html) of 
+the tutorial. I will just tell a little bit about I have been using Docker since I learned
+it myself. 
+
+#### Docker as a portable computer with fixed settings
+I love writing this blog, but installing all the things to get it running was a true pain.
+But I will not have to worry about this again. I have a
+[Dockerfile](https://github.com/HeidiSeibold/HeidiSeibold.github.io/tree/master/_build),
+which is just a plain text file that builds a Docker image. I just copy onto any
+computer (e.g. by checking out my git repository with my 
+[blog stuff](https://github.com/HeidiSeibold/HeidiSeibold.github.io)), build the Docker 
+image, start the container and have a RStudio running in my browser in no time. And I 
+know the stuff installed in this container are allways the same. It just works.
+
+#### Docker images as ensurance of reproducible research
+In a previous [blog post](http://heidiseibold.github.io/r/2016/02/07/Reproducibility/) 
+I wrote about my goal to make my research fully reproducible. With Docker I think I can
+be step closer to the gold standard. I can do all my analyses and just add them to a
+Docker image and distribute it for everyone to use. Check out how to do that 
+[here](http://ropenscilabs.github.io/r-docker-tutorial/06-Sharing-all-your-analysis.html).
+And the great thing is, that everyone will have the same settings and versions of 
+packages as I did when I did the analyses and thus get exactly the same results.
+
+
+
+
+
