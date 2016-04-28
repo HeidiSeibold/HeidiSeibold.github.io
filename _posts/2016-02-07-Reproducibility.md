@@ -3,7 +3,7 @@ title: "My favorite tools for helping future me"
 author: "Heidi Seibold"
 layout: post
 category: r
-tags: [make, knitr, linux, version control, svn, reproducible research]
+tags: [make, knitr, linux, version control, svn, git, reproducible research]
 comments: True
 ---
 
@@ -51,7 +51,7 @@ can easily be transformed into .Rd files.
 
 #### SVN
 To keep track of the changes and in order to be able to go back to old 
-versions of my code or my latex files, I use SVN (or occasionally git). This is
+versions of my code or my latex files, I use SVN (or git). This is
 super nice when you work alone. It is even better when you work with other people.
 With SVN I control and save all my R-, Rnw-, tex- and other files that are 
 important to keep in case my computer breaks or my office burns down. In this 
@@ -78,18 +78,4 @@ middle of my code and with a single command (make) I can update everything that
 is neccesary.
 4. If the worst happens and all the machines I work on brake, I want to be able
 to recreate everything without loosing much time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

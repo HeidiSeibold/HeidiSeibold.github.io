@@ -1,3 +1,4 @@
+.rstudio
 .Rhistory
 *.bak
 Gemfile.lock

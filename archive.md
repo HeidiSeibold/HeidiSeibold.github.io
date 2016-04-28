@@ -142,3 +142,4 @@ title: Archive
 {% endfor %}
 </ul>
 
+#### Thanks for visiting my blog
