@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "OpenML"
-tags: [R, reproducible research, machine learning]
+tags: [reproducible research, machine learning]
+category: r
 comments: True
 ---
 
