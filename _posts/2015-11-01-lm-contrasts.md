@@ -25,7 +25,7 @@ library(ggplot2)
 ggplot(aes(x = x, y = y), data = dd) + geom_boxplot()
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-1](http://heidiseibold.github.io/figure/source/2015-11-01-lm-contrasts/unnamed-chunk-1-1.png)
+![plot of chunk unnamed-chunk-1](/figure/source/2015-11-01-lm-contrasts/unnamed-chunk-1-1.png)
 
 {% highlight r %}
 means <- tapply(y, x, mean)
@@ -114,7 +114,7 @@ means
 Compare each category to the dummy-category \\( a\_d \\):
 
 \\[ E(Y|X=a\_{d}) = \beta\_0 \\]
-
+and
 \\[ E(Y|X=a\_k) = \beta\_0 + \beta\_k, \quad k\neq d \\]
 
 {% highlight r %}
@@ -180,7 +180,7 @@ c(means[5], means[1:4] - means[5])
 Compare each category to the mean:
 
 \\[ E(Y|X=a\_k) = \beta\_0 + \beta\_k, \quad k=1,\dots,K-1 \\]
-
+and
 \\[ E(Y|X=a\_K) = \beta\_0 - \sum\limits\_{j=1}^{K-1} \beta\_j \\]
 
 {% highlight r %}
@@ -246,7 +246,7 @@ c(mean(means), means[1:4] - mean(means))
 Compare each category to the previous category (for ordered categories):
 
 \\[ E(Y|X=a\_1) = \beta\_0 \\]
-
+and
 \\[ E(Y|X=a\_k) = \beta\_0 + \sum\limits\_{j=1}^{k-1} \beta\_j, \quad k=2,\dots,K \\]
 
 {% highlight r %}
