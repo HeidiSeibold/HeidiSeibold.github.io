@@ -44,7 +44,7 @@ very high, so our \\(R^2\\) is pretty low. Let's add further useless covarates t
 model.
 
 
-```{r, message = FALSE}
+```{r, message = FALSE, results='hide', fig.keep = 'none'}
 R2 <- data.frame(p_useless = NULL, R2 = NULL, adjusted = NULL)
 
 for(i in 1:(n-1)) {
@@ -62,6 +62,8 @@ ggplot(data = R2, aes(x = p_useless, y = R2)) +
   ylab(expression(R^2)) + 
   xlab("number of useless covariates")
 ```
+
+![R2](http://heidiseibold.github.io/figure/source/2015-11-21-R-squared/unnamed-chunk-2-1.png) 
 
 And voilà the more random covariates we add the better the model according to \\(R^2\\).
 Does not make sense right?
