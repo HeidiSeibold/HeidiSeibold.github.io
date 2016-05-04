@@ -23,11 +23,7 @@ dd <- data.frame(x = x, y = y)
 
 library(ggplot2)
 ggplot(aes(x = x, y = y), data = dd) + geom_boxplot()
-{% endhighlight %}
 
-![plot of chunk unnamed-chunk-1](/figure/source/2015-11-01-lm-contrasts/unnamed-chunk-1-1.png)
-
-{% highlight r %}
 means <- tapply(y, x, mean)
 means
 {% endhighlight %}
@@ -39,6 +35,7 @@ means
 ## 0.9962925 2.0227058 3.0230409 3.9482690 5.0189041
 {% endhighlight %}
 
+![R2](http://heidiseibold.github.io/figure/source/2015-11-01-lm-contrasts/unnamed-chunk-1-1.png) 
 
 Now we want to model the mean of y given x using the `lm()` function with the following codings:
 *dummy-coding*, *treatment-coding* (where the reference category is 5), *effect-coding*
