@@ -21,4 +21,4 @@ See the [link](https://github.com/HeidiSeibold/HeidiSeibold.github.io/tree/maste
 for the Dockerfile. 
 
 
-For many more blogs on R and stats go to [R-bloggers](http://www.r-bloggers.com/).
+For many more blogs on R and stats go to [R-bloggers](http://www.r-bloggers.com/) and [StatsBlogs](http://www.statsblogs.com/).
