@@ -1,0 +1,110 @@
+---
+layout: post
+title: "Eurovision Song Contest: Voting preferences of countries"
+category: r
+tags: [make, visualisation]
+comments: True
+---
+
+```{r}
+library("reshape2")
+library("plyr")
+library("ggplot2")
+
+files <- list.files("ESC_data", pattern = "-final.csv")
+
+## read ESC matrices and turn into data frame
+read_esc <- function(x) {
+  xp <- paste0("ESC_data/", x)
+  d_wide <- read.csv(xp, sep = "\t", check.names = FALSE, stringsAsFactors = FALSE)
+  d_wide[is.na(d_wide)] <- 0
+  names(d_wide) <- gsub("&| |\\.", "", names(d_wide))
+  d_wide$Participant <- gsub("&| |\\.", "", d_wide$Participant)
+  
+  d_wide$Points <- NULL
+  d_wide$Place <- NULL
+  
+  d <- melt(d_wide, id.vars = "Participant")
+  names(d) <- c("to", "from", "points")
+  
+  d$year <- as.numeric(gsub("-final.csv", "", x))
+  d
+}
+
+esc <- ldply(files, read_esc)  
+
+## alltime points for ranking of countries (used in factor coding)
+points_alltime <- ddply(esc, .(to), function(x) sum(x$points))
+points_alltime <- rbind(points_alltime,
+                        data.frame(to = levels(esc$from)[!(levels(esc$from) %in% 
+                                                             points_alltime$to)],
+                                   V1 = 0))
+esc$to <- factor(esc$to, levels = points_alltime$to[order(points_alltime$V1, decreasing = TRUE)])
+esc$from <- factor(esc$from, levels = points_alltime$to[order(points_alltime$V1, decreasing = TRUE)])
+
+## heatmap of voting points per year
+ggplot(esc, aes(x = from, y = to, fill = points)) + geom_tile() +
+  theme(axis.text.x = element_text(angle = 330, hjust = 0)) +
+  scale_fill_gradient(low = "yellow", high = "steelblue", na.value = "black") +
+  facet_grid(year ~ .) 
+
+
+## get location data of countries
+lonlat <- read.csv("ESC_data/Country_List_ISO_3166_Codes_Latitude_Longitude.csv", 
+                   check.names = FALSE, stringsAsFactors = FALSE)
+names(lonlat) <- gsub(" |\\(average\\)|-", "", names(lonlat))
+lonlat <- lonlat[ ,c( "Country", "Alpha3code", "Latitude", "Longitude")]
+
+## manually change location of Russis and Australia a little for plotting
+lonlat$Latitude[lonlat$Alpha3code == "AUS"] <- 25
+lonlat$Longitude[lonlat$Alpha3code == "AUS"] <- 50
+lonlat$Longitude[lonlat$Alpha3code == "RUS"] <- 50
+
+
+## combine ESC data with location data
+get_lonlat <- function(x, from = TRUE, to = TRUE) {
+  
+  if(from) {
+    cdist <- adist(lonlat$Country, x$from, costs = list(deletions = 0.01))
+    from <- lonlat[which.min(cdist), ]
+    names(from) <- paste0(names(lonlat), "_from")
+  }
+  
+  if(to) {
+    cdist <- adist(lonlat$Country, x$to, costs = list(deletions = 0.01))
+    to <- lonlat[which.min(cdist), ]
+    names(to) <- paste0(names(lonlat), "_to")
+  }
+  
+  cbind(to, from)
+}
+
+
+esc_mean_ft <- ddply(esc, .(to, from), function(x) data.frame(mean_points = mean(x$points),
+                                                               n = nrow(x)))
+esc_mean_ft <- adply(esc_mean_ft, 1, get_lonlat)
+esc_mean_t <- ddply(esc, .(to), function(x) data.frame(mean_points = mean(x$points),
+                                                        n = nrow(x)))
+esc_mean_t <- adply(esc_mean_t, 1, get_lonlat, from = FALSE)
+
+some_countries <- c("DEU", "RUS", "GBR")
+
+ggplot() +
+  geom_segment(data = subset(esc_mean_ft, Alpha3code_from %in% some_countries), 
+               aes(x = Longitude_from, xend = Longitude_to,
+                   y = Latitude_from, yend = Latitude_to,
+                   color = mean_points,
+                   size = mean_points)) + 
+  facet_grid(Alpha3code_from ~ .) + 
+  geom_text(data = esc_mean_t, aes(label = Alpha3code_to, 
+                                   x = Longitude_to, y = Latitude_to,
+                                   size = mean_points, alpha = n)) +
+  scale_color_gradient(low = "azure", high = "green4") +
+  scale_size_area() +
+  theme_bw() 
+
+
+
+```
+
+
