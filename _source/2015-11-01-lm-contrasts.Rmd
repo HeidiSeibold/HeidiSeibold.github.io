@@ -14,7 +14,7 @@ confusing, I want to help out a little here.
 
 Consider the following data
 
-```{r, fig.height=5, message=FALSE}
+```{r, fig.height=5, message=FALSE, fig.keep = 'none'}
 
 set.seed(29)
 x <- gl(5, 10) # 5 factor's levels, each replicated 10 times
@@ -29,6 +29,7 @@ means
 
 ```
 
+![R2](http://heidiseibold.github.io/figure/source/2015-11-01-lm-contrasts/unnamed-chunk-1-1.png) 
 
 Now we want to model the mean of y given x using the `lm()` function with the following codings:
 *dummy-coding*, *treatment-coding* (where the reference category is 5), *effect-coding*
@@ -54,7 +55,7 @@ means
 Compare each category to the dummy-category \\( a\_d \\):
 
 \\[ E(Y|X=a\_{d}) = \beta\_0 \\]
-
+and
 \\[ E(Y|X=a\_k) = \beta\_0 + \beta\_k, \quad k\neq d \\]
 ```{r}
 # treatment (restrict one level to constant term, all other difference from it)
@@ -70,7 +71,7 @@ c(means[5], means[1:4] - means[5])
 Compare each category to the mean:
 
 \\[ E(Y|X=a\_k) = \beta\_0 + \beta\_k, \quad k=1,\dots,K-1 \\]
-
+and
 \\[ E(Y|X=a\_K) = \beta\_0 - \sum\limits\_{j=1}^{K-1} \beta\_j \\]
 ```{r}
 # effect(deviation from overall average)
@@ -86,7 +87,7 @@ c(mean(means), means[1:4] - mean(means))
 Compare each category to the previous category (for ordered categories):
 
 \\[ E(Y|X=a\_1) = \beta\_0 \\]
-
+and
 \\[ E(Y|X=a\_k) = \beta\_0 + \sum\limits\_{j=1}^{k-1} \beta\_j, \quad k=2,\dots,K \\]
 ```{r}
 # split coding
