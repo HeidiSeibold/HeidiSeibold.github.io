@@ -79,3 +79,9 @@ is neccesary.
 4. If the worst happens and all the machines I work on brake, I want to be able
 to recreate everything without loosing much time.
 
+
+---
+### Update (04.07.2016): 
+I now also use [Docker](https://hub.docker.com/). 
+See my [post](http://heidiseibold.github.io/r/2016/06/13/Docker/) on how I learned
+Docker.
