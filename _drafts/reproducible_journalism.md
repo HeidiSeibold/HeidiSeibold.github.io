@@ -8,7 +8,7 @@ and reproducible data journalism can use the same tools and workflows as open
 and reproducible science, because both investigate complex topics, often
 involve collaboration and have openness and reproducibility as goals.
 
-![](toolkit.jpg) 
+![](https://upload.wikimedia.org/wikipedia/commons/f/f4/Campagnolo_Tool_Kit_Super_Record_Wooden_Box_Nr._16.jpg) 
 
 ## What should data journalists consider to learn
 ### R
