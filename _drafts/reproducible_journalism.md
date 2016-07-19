@@ -91,19 +91,22 @@ To get a first glimpse at how to use Makefiles, check out the
 [tutorial by Karl Broman](http://kbroman.org/minimal_make/). 
 
 ### Docker
-[Docker]() images are essentially little computers on your computer, which you
-can send to other computers easily and which can be used to keep a stable
-environment to work with. Imagine you use software for a project that is hard
-to install or that might change over time. You want to collaborate on the
-project with someone or maybe you want to go back to the project some time in
-the future. This can be really hard. If you have a little pseudo-computer
-(docker image) where you have just the stuff for this given project installed
-and maybe even have the data and code saved in there, you can just send it to
-your collaborator or your future self. The person then only has to start up the
-image and can work in this fixed environment.
+[Docker](http://www.docker.com/) images are essentially little computers on
+your computer, which you can send to other computers easily and which can be
+used to keep a stable environment to work with. Imagine you use software for a
+project that is hard to install or that might change over time. You want to
+collaborate on the project with someone or maybe you want to go back to the
+project some time in the future. This can be really hard. If you have a little
+pseudo-computer (docker image) where you have just the stuff for this given
+project installed and maybe even have the data and code saved in there, you can
+just send it to your collaborator or your future self. The person then only has
+to start up the image and can work in this fixed environment.  The Washington
+post just published a [video](https://youtu.be/_PDoxTThGnY) in which they
+describe what they use Docker for. 
 
 To get started with Docker, check out this
-[tutorial](http://ropenscilabs.github.io/r-docker-tutorial/). 
+[tutorial](http://ropenscilabs.github.io/r-docker-tutorial/) or the
+[courses on the Docker website)[https://training.docker.com/]. 
  
 
 
