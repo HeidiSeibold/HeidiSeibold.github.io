@@ -1,0 +1,105 @@
+---
+title: "My favorite podcasts"
+author: "Heidi Seibold"
+layout: post
+tags: [podcast]
+comments: True
+---
+
+I have to be honest: I am addicted to listening to audio podcasts. Every working day I 
+spend at least 30 minutes listening. I have started looking forward to long train rides
+because I can catch up on my listening. In fact, you are lucky I am writing this post 
+right now because I am on the train from Zurich to Heidelberg and it was a hard choice
+between listening and writing this :)
+
+Of course I want to share my podcast knowledge with you and please leave a
+comment if there is another podcast you think I should listen to. I am always interested
+in more.
+
+There is *no ranking* here. I have phases in which I prefer listening to one over the other
+but they are all good.
+
+
+## Science related podcasts
+
+#### [Open Science Radio](http://www.openscienceradio.de/)
+I discoverd this podcast by Konrad Foerstner and Matthias Fromm early this 
+summer and loved it from the start. Many of their episodes are in English and
+some in German. They talk about anything that is going on in the world of 
+Open Science. 
+
+#### [Science: Disrupt](http://sciencedisrupt.com/)
+This podcast is highly professional and I love the teasers they have in the 
+beginning. They talk about new developments going on in science as a profession. 
+Usually they interview
+guests with a interesting projects.
+
+#### [The Effort Report](http://effortreport.libsyn.com/)
+This is a must listen for every young researcher who wants to stay in science.
+Each episode deals with a different topic researchers struggle with and  the
+hosts Roger Peng and Elisabeth Matsui talk about how they personally deal with the 
+struggles.
+
+#### [TED Radio Hour](http://www.npr.org/programs/ted-radio-hour/)
+This podcasts is all about TED talks. Each episode has a special topic;
+several TED talks are featured and the speakers iterviewed. The perfect audio
+alternative to watching the presentations.
+
+#### [PLOScast](http://blogs.plos.org/plospodcasts/)
+I just discovered this podcast very recently after it was brought up in the 
+Open Science Podcast. As the name suggests it is the podcast from the PLOS journal
+and as such they talk a lot about open science as well.
+
+
+
+
+## Stats related podcasts
+
+#### [Not so standard deviations](https://soundcloud.com/nssd-podcast) 
+This podcast by Hilary Parker and (again) Roger Peng is the most relaxing data science
+podcast. It's just like listening to an interesting conversation that you can't
+contribute to (except by tweeting to [@SSDeviations](https://twitter.com/NSSDeviations)). They talk a lot about R and
+common problems in the life of a data scientist. 
+
+#### [Data stories](http://datastori.es/)
+This is one of my newer discoveries. In data stories the hosts Enrico Bertini and Moritz Stefaner 
+interview guests who do interesting analyses.
+
+#### [Talking machines](http://www.thetalkingmachines.com/)
+Talking machines is a machine learning podcast. It often features interesting
+machine learning methods. As such it is sometimes hard for me 
+to understand. Every once in a while they have truly fascinating episodes that I 
+like a lot and for machine learners who want to learn more stuff this is definetly
+the go-to podcast.
+
+
+
+## Other good podcasts
+
+#### [Invisibilia](http://www.npr.org/podcasts/510307/invisibilia)
+This is definetly the most touching podcast I have listened to. It has happened
+that I sat on the train crying a little bit. It features the unvisible things
+in life, which sounds a little superstitious but it really is not. Unfortunately, but
+considering the research effort they have to go throug understandably, there are
+quite few episodes each year.
+
+#### [Philosophy Bites](http://www.philosophybites.com/)
+Every episode of Philosophy Bites deals with one philosophical topic. The 
+podcast guests are usually philosophers who deal with this topic every day.
+The episodes are quite short, so this is a nice podcast for a 20 minute commute.
+
+#### [Echo der Zeit](http://www.srf.ch/sendungen/echo-der-zeit)
+This is the best daily Swiss news podcast.
+
+#### [Das Computermagazin (B5 aktuell)](http://www.br.de/radio/b5-aktuell/sendungen/computermagazin/computermagazin108.html)
+B5 aktuell is the news radio in Bavaria (Germany). They have this surprisingly
+outstanding podcast about anything a geek in Germany would want to know. From 
+new devices to new EU laws dealing with the internet it provides just great
+information to bavarian listeners each sunday.
+
+
+
+---
+
+I listen to all my podcasts on my smartphone. After having tried a couple of 
+different apps I ended up using BeyondPod with which I am very happy.
