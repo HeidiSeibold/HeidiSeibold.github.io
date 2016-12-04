@@ -1,0 +1,32 @@
+---
+title: "HackScience"
+author: "Heidi Seibold"
+layout: post
+tags: [Open Science]
+comments: True
+---
+
+OpenML and HackScience had a call last week and since I think, that HackScience
+is an awesome project, I want to share what I have learned.
+
+## The problem
+Many scientist who work in a lab do a lot of work that could, in fact be automised.
+These scientist "waste" a lot of time on this work instead of using their smart
+brains for something else. Imagine a cell biologist: What if she would not have
+to take care of the feeding of cells anymore. What if a robot could do it for her.
+She could spend her time to think about her results, write papers, ...
+
+## Steps towards a solution
+To solve the problem, the people from HackScience started to organise hackathons
+where they brought scientists and engineers together to work on automatising 
+the scientist's work. But not every scientist can get his own hackathon, so 
+they came up with the idea to build open source software that everyone can change
+according to their wishes. And the hope is that the hardware will follow as soon
+as the software is there.
+
+## The grand vision
+Automate all processes in all labs that can be automatised.
+
+
+
+

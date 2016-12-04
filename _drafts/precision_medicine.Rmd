@@ -1,0 +1,43 @@
+---
+title: "Personalised medicine"
+author: "Heidi Seibold"
+layout: post
+category: r
+tags: [personalised medicine, precision medicine, subgroup analysis, my research]
+comments: True
+---
+
+Personalised medicine, precision medicine and subgroup analysis are important 
+terms these days. Especially for me since that is what my PhD is all about.
+
+Here I want to collect a few links and papers that I want to remember and
+I want to help other people find useful information. Also of course I would 
+like to advertise a little for my own research :)
+
+## Methods
+
+- Interaction model (interaction between the treatment and covariates), possibly
+  including penalization for model selection (lasso).
+- [MOB (model-based recursive partitioning)](http://arxiv.org/abs/1605.04078)*
+- [Individual treatment effects based on random forest](http://arxiv.org/abs/1604.08720)*
+- palmtree (Partially Additive (Generalized) Linear Model Tree)*
+- [RECPAM](http://www.sciencedirect.com/science/article/pii/089543569400164L)
+- [GUIDE (generalized unbiased interaction detection and estimation) based approaches](http://onlinelibrary.wiley.com/doi/10.1002/sim.6454/abstract;jsessionid=D646A3B8437AA61636F2E2A4B5D87394.f03t04)
+- [QUINT (Qualitative interaction trees)](http://onlinelibrary.wiley.com/doi/10.1002/sim.5933/abstract)
+- [SIDES (subgroup identification based on differential effect search)](http://www.tandfonline.com/doi/abs/10.1080/10543406.2013.856024)
+- [Virtual Twins](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/87004/sim4322.pdf?sequence=1)
+
+
+## Software
+
+- [A list of subgroup analyses software](http://biopharmnet.com/subgroup-analysis-software/)
+- [R code for individual treatment effect prediction](https://github.com/HeidiSeibold/personalised_medicine)*
+
+## Further interesting literature
+- [Will Precision Medicine Move Us beyond Race?](http://www.nejm.org/doi/full/10.1056/NEJMp1511294)
+- [NIH: precision medicine vs personalized medicine](https://ghr.nlm.nih.gov/primer/precisionmedicine/precisionvspersonalized)
+- [What next for randomised clinical trials?](http://onlinelibrary.wiley.com/doi/10.1111/j.1740-9713.2015.00798.x/abstract)
+  How medical research went from personalised to generalised (RCTs) and is now back on
+  the way to personalised medicine.
+
+*Things I am involved in.
