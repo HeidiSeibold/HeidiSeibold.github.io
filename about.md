@@ -26,6 +26,9 @@ neccessary details installed.  See the
 [link](https://github.com/HeidiSeibold/HeidiSeibold.github.io/tree/master/_build)
 for the Dockerfile. 
 
+I also sometimes write for other blogs. You can find my OpenML posts on
+[medium](https://medium.com/@HeidiBaya) and my mlr posts on the [mlr
+blog](http://mlr-org.github.io/).
 
 For many more blogs on R and stats go to
 [R-bloggers](http://www.r-bloggers.com/) and
