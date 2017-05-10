@@ -6,13 +6,13 @@ title: About
 My name is Heidi and I am a PhD student in Biostatistics at UZH. I am
 interested in statistical learning, especially trees and forests, open science,
 reproducible research, R and teaching.  I am a core member of
-[OpenML](www.openml.org), co-organizer of the [Zurich R User
+[OpenML](https://www.openml.org/), co-organizer of the [Zurich R User
 Meetup](http://www.meetup.com/Zurich-R-User-Group/) and assistant editor of the
-[Journal of Statistical Software (JSS)](www.jstatsoft.org).  In my free time I
-like dancing salsa, biking, hiking, sailing and most other outdoors activities.
-On the non-active days I write this blog.  If you think I am an interesting
-person, check out my [GitHub](https://github.com/HeidiSeibold/) account and
-follow me on [Twitter](https://twitter.com/HeidiBaya).
+[Journal of Statistical Software (JSS)](https://www.jstatsoft.org).  In my free
+time I like dancing salsa, biking, hiking, sailing and most other outdoors
+activities.  On the non-active days I write this blog.  If you think I am an
+interesting person, check out my [GitHub](https://github.com/HeidiSeibold/)
+account and follow me on [Twitter](https://twitter.com/HeidiBaya).
 
 
 I set up this blog using [knitr](yihui.name/knitr/),
